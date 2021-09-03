@@ -1,7 +1,7 @@
 {
-  "name": "@imaf/cli-service",
-  "version": "0.0.2",
-  "description": "imaf cli service api for plugin",
+  "name": "@imaf/cli-utils",
+  "version": "0.0.1",
+  "description": "utils for cli",
   "scripts": {
     "build": "rimraf lib && yarn build:esm && yarn build:cjs",
     "build:esm": "tsc --module es2015 --outDir lib/esm",
@@ -9,13 +9,15 @@
     "build:watch": "yarn tsc --module es2015 --outDir lib/esm -d -w --sourceMap",
     "ts": "yarn build:esm"
   },
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "lib/cjs/index.js",
   "browser": "lib/esm/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/cjs/index.d.ts",
-  "bin": {
-    "maf-cli-service": "lib/cjs/bin/maf-cli-service.js"
+  "jest": {
+    "testEnvironment": "node"
   },
   "files": [
     "lib/esm",
@@ -24,36 +26,34 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imafjs/imaf-cli.git",
-    "directory": "packages/cli-service"
+    "directory": "packages/cli-utils"
   },
-  "keywords": [
-    "imaf",
-    "imaf-cli",
-    "imaf-cli-service",
-    "@imaf",
-    "@imaf/cli-service"
-  ],
   "author": "zhangyd915@163.com",
   "license": "MIT",
-  "devDependencies": {
-    "@types/jest": "^27.0.1",
-    "jest": "^27.0.6",
-    "ts-jest": "^27.0.4",
-    "typescript": "^4.3.5"
-  },
   "dependencies": {
-    "@imaf/cli-utils": "^0.0.1",
-    "@types/debug": "^4.1.7",
-    "@types/hash-sum": "^1.0.0",
-    "@types/lodash": "^4.14.172",
-    "@types/minimist": "^1.2.2",
-    "debug": "^4.3.2",
-    "hash-sum": "^2.0.0",
-    "is-file-esm": "^1.0.0",
-    "lodash": "^4.17.21",
-    "minimist": "^1.2.5"
+    "@types/semver": "^7.3.8",
+    "chalk": "^4.1.2",
+    "events": "^3.3.0",
+    "execa": "^5.1.1",
+    "joi": "^17.4.2",
+    "launch-editor": "^2.2.1",
+    "lru-cache": "^6.0.0",
+    "node-fetch": "^2.6.1",
+    "open": "^8.2.1",
+    "ora": "^6.0.0",
+    "read-pkg": "^5.2.0",
+    "readline": "^1.3.0",
+    "semver": "^7.3.5",
+    "strip-ansi": "^6.0.0"
   },
-  "engines": {
-    "node": "^14.0.0"
+  "devDependencies": {
+    "@types/jest": "^27.0.0",
+    "@types/node": "^16.4.13",
+    "i": "^0.3.6",
+    "jest": "^27.0.6",
+    "npm": "^7.20.5",
+    "ts-jest": "^27.0.4",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
   }
 }

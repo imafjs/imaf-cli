@@ -1,12 +1,49 @@
 {
-  "name": "cli",
+  "name": "@imaf/cli",
   "version": "0.0.2",
-  "description": "",
-  "main": "index.js",
+  "description": "Command line interface for rapid imaf.js development",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf lib && yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc --module es2015 --outDir lib/esm",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs -d",
+    "build:watch": "yarn tsc --module es2015 --outDir lib/esm -d -w --sourceMap",
+    "ts": "yarn build:esm"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/cjs/index.js",
+  "browser": "lib/esm/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/cjs/index.d.ts",
+  "bin": {
+    "maf": "lib/cjs/bin/maf.js"
+  },
+  "files": [
+    "lib/esm",
+    "lib/cjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imafjs/imaf-cli.git",
+    "directory": "packages/cli"
+  },
+  "keywords": [
+    "maf",
+    "cli",
+    "maf-cli"
+  ],
+  "dependencies": {
+    "@imaf/cli-utils": "^0.0.1",
+    "@types/commander": "^2.12.2",
+    "@types/inquirer": "^7.3.3",
+    "commander": "^8.1.0",
+    "inquirer": "^8.1.2",
+    "leven": "^3.1.0"
+  },
+  "author": "zhangyd915@163.com",
+  "license": "MIT",
+  "engines": {
+    "node": "^14.0.0"
+  }
 }

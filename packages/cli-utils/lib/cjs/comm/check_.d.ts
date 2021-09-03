@@ -1,0 +1,17 @@
+export declare function isArray(arg: any): boolean;
+export declare function isBoolean(arg: any): boolean;
+export declare function isNull(arg: any): boolean;
+export declare function isNullOrUndefined(arg: any): boolean;
+export declare function isNumber(arg: any): boolean;
+export declare function isString(arg: any): boolean;
+export declare function isSymbol(arg: any): boolean;
+export declare function isUndefined(arg: any): boolean;
+export declare function isRegExp(re: any): boolean;
+export declare function isObject(arg: any): boolean;
+export declare function isDate(d: any): boolean;
+export declare function isError(e: any): boolean;
+export declare function isFunction(arg: any): boolean;
+export declare function isPrimitive(arg: any): boolean;
+export declare function isDefined(value: any): boolean;
+export declare function isTrueEmpty(obj: any): boolean;
+export declare function isEmpty(obj: any): boolean;

@@ -1,0 +1,30 @@
+{
+  "name": "imaf-cli",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "description": "imaf cli for developer",
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imafjs/imaf-cli.git"
+  },
+  "keywords": [
+    "imaf",
+    "imaf-cli"
+  ],
+  "author": "zhangyd915@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imafjs/imaf-cli/issues"
+  },
+  "homepage": "https://github.com/imafjs/imaf-cli#readme"
+}

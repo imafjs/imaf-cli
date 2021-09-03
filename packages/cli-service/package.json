@@ -1,5 +1,5 @@
 {
-  "name": "cli",
+  "name": "cli-service",
   "version": "0.0.2",
   "description": "",
   "main": "index.js",
